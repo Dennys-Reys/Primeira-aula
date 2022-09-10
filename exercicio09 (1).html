@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculadora do Dennys</h2>
+   1o numero <input id ="in_numero1"> <br>
+   2o numero <input id ="in_numero2"> <br><br>
+   <button onclick="somar()">Somar</button>
+   <button onclick="subtrair()">Subtrair</button>
+   <button onclick="multiplicar()">Multiplicar</button>
+   <button onclick="dividir()">Dividir</button> 
+   <br><br>
+   <div id="div_resultado"></div>
+
+
+</body>
+</html>
+<script>
+function somar () {
+div_resultado.innerHTML = `A soma é ${Number (in_numero1.value) + Number(in_numero2.value)}`
+}
+
+function subtrair () {
+div_resultado.innerHTML = `A diferença é ${Number (in_numero1.value) - Number(in_numero2.value)}`
+}
+
+function multiplicar () {
+div_resultado.innerHTML = `O produto é ${Number (in_numero1.value) * Number(in_numero2.value)}`
+}
+
+function dividir () {
+div_resultado.innerHTML = ` A razão é ${Number (in_numero1.value) / Number(in_numero2.value)}`
+}
+
+
+
+
+
+</script>

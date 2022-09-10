@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculadora aposentadoria</h2>
+Solicitar nota de avaliação continuada<input id="in_continuada"><br>
+Solicitar nota de avaliação semestral<input id="in_semestral"><br>
+Nome do usuário<input id="in_nome"><br>
+<button onclick="media()">Calcular média</button><br>
+
+<div id="div_nota"></div>
+</body>
+</html>
+
+
+<script>
+    function  média() {
+        div_nota.innerHTML= `A média de ${in_nome.value}  será de ${(Number(in_continuada.value) + 0.4) +
+            (Number(in_semestral.value)*0.6)}`
+        }
+        
+ 
+
+
+</script>

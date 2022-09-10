@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Verificador de desperdicío</h2><br><br>
+
+
+    Torneira 1<input id="in_torneira1"><br>
+    Torneira 2<input id="in_torneira2"><br>
+    Torneira 3<input id="in_torneira3"><br>
+    <button onclick="desperdicio()">Verificar desperdicío</button><br><br>
+    <div id="div_resultado"></div>
+
+
+    
+</body>
+</html>
+<script>
+    function desperdicio (){ 
+        div_resultado.innerHTML = Number(in_torneira1.value) + Number(in_torneira2.value) + 
+        Number (in_torneira3.value)
+
+    }
+    
+        function alert (){
+          div_resultado.innerHTML = `Suas 3 torneiras, juntas, desperdiçaram ${Number(in_torneira1) + Number(in_torneira2) + Number(in_torneira3)}`
+        }
+    
+</script>
