@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorveteria Formnigas</title>
+</head>
+<body>
+    Valor por grama <br>
+    <input type="text" id="in_grama"><br>
+    Informar peso <br>
+    <input type="text" id="in_peso"><br>
+    Informar cobertura <br>
+    <input type="text" id="in_top"><br>
+    Informar tipo <br>
+    <input type="text" id="in_tipo"><br><br>
+    <button onclick="calcular()">Calcular</button>
+    <div id="div_total"></div>
+
+</body>
+</html>
+<script>
+    function calcular (){
+        var vlrSorv =Number(in_grama.value)
+        var peso =Number(in_peso.value)
+        var sabor = in_top.value
+        var tipo = in_tipo.value
+        var cobertura = in_top
+        var valorSorv = 0
+      
+        
+
+        if (tipo == 'G') {
+            var ttlSorv = vlrSorv + (vlrSorv * 0.11)
+             valorSorv = ttlSorv * peso 
+            
+        }
+        else {
+        var ttlSorv = vlrSorv - (vlrSorv * 0.1) 
+         valorSorv = ttlSorv * peso   
+        }
+        if (cobertura != 'C') { 
+        var conta = ttlSorv + 0.01
+        valorSorv = conta
+        }
+         else {
+             valorSorv = ttlSorv
+        }
+    
+          if (valorSorv >= 10) { 
+            div_total.innerHTML =`<b><font color= green> O seu sorvete vai custar R$${conta} e vai comprometer a mesada </font color><b> `}
+
+            else {
+            div_total.innerHTML = `<b><font color= blue> Hoje você está maneirando, gastou somente R$${conta} <b></font color>` }
+        
+
+        
+    
+
+    }
+</script>
+
+
